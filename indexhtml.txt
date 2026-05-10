@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Meri Website</title>
+</head>
+<body>
+<h1>Welcome to My Shop</h1>
+<p>Yahan hum jald hi samaan bechenge!</p>
+</body>
+</html>
