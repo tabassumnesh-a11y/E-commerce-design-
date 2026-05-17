@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "background": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "secondary-container": "#dde3eb",
+                "primary-fixed": "#d6e3ff",
+                "secondary-fixed-dim": "#c1c7cf",
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-fixed-dim": "#f2bc82",
+                "on-surface-variant": "#43474e",
+                "error-container": "#ffdad6",
+                "surface-container-high": "#dce9ff",
+                "on-primary-fixed": "#001b3c",
+                "on-tertiary-fixed": "#2b1700",
+                "outline-variant": "#c4c6cf",
+                "primary": "#002045",
+                "tertiary-fixed": "#ffddba",
+                "surface-variant": "#d3e4fe",
+                "surface-container": "#e5eeff",
+                "tertiary": "#321b00",
+                "surface-container-lowest": "#ffffff",
+                "surface-tint": "#455f88",
+                "primary-fixed-dim": "#adc7f7",
+                "outline": "#74777f",
+                "tertiary-container": "#4f2e00",
+                "secondary-fixed": "#dde3eb",
+                "on-tertiary": "#ffffff",
+                "on-secondary": "#ffffff",
+                "on-tertiary-container": "#c6955e",
+                "error": "#ba1a1a",
+                "on-secondary-fixed-variant": "#41474e",
+                "surface-dim": "#cbdbf5",
+                "on-background": "#0b1c30",
+                "on-primary-container": "#86a0cd",
+                "surface": "#f8f9ff",
+                "surface-container-low": "#eff4ff",
+                "on-tertiary-fixed-variant": "#633f0f",
+                "on-secondary-fixed": "#161c22",
+                "surface-container-highest": "#d3e4fe",
+                "on-surface": "#0b1c30",
+                "on-primary": "#ffffff",
+                "primary-container": "#1a365d",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#5f656c",
+                "inverse-surface": "#213145",
+                "secondary": "#595f66",
+                "inverse-primary": "#adc7f7",
+                "on-primary-fixed-variant": "#2d476f",
+                "surface-bright": "#f8f9ff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "xl": "80px",
+                "base": "8px",
+                "md": "24px",
+                "sm": "12px",
+                "gutter": "24px",
+                "container-max": "1280px",
+                "xs": "4px",
+                "lg": "48px"
+            },
+            "fontFamily": {
+                "headline-lg": ["Manrope"],
+                "body-lg": ["Inter"],
+                "label-md": ["Inter"],
+                "headline-md": ["Manrope"],
+                "label-sm": ["Inter"],
+                "headline-xl": ["Manrope"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "headline-lg": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "600"}],
+                "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-primary dark:text-inverse-primary">
+                LUXE
+            </div>
+<div class="hidden md:flex gap-md items-center h-full">
+<a class="font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 text-on-surface-variant dark:text-surface-variant font-medium" href="#">Shop All</a>
+<a class="font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 font-bold" href="#">New Arrivals</a>
+<a class="font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 text-on-surface-variant dark:text-surface-variant font-medium" href="#">Collections</a>
+<a class="font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 text-on-surface-variant dark:text-surface-variant font-medium" href="#">Sale</a>
+</div>
+<div class="flex items-center gap-sm">
+<button class="p-2 transition-all duration-200 active:opacity-80">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary">search</span>
+</button>
+<button class="p-2 transition-all duration-200 active:opacity-80">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary">person</span>
+</button>
+<button class="p-2 transition-all duration-200 active:opacity-80 relative">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary">shopping_cart</span>
+<span class="absolute top-1 right-1 w-4 h-4 bg-[#2F855A] text-white text-[10px] rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[707px] w-full overflow-hidden flex items-end">
+<img alt="Hero Product" class="absolute inset-0 w-full h-full object-cover" data-alt="A high-end editorial fashion photograph of a sleek, minimalist sneaker placed on a clean white marble pedestal. The lighting is bright and high-key with soft, diffused shadows that emphasize the premium textures of the leather and suede. The scene uses a professional light-mode aesthetic with a palette of crisp whites, slate blues, and deep navy accents, creating an atmosphere of sophisticated corporate luxury and modern minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsQ3ZBbBMlEDnIsVrk45JAU_4qKuxN8yG4cgdbOjVGl3zIPyk5gZEhHixU79gM30ph6Os9RRBDG8nxo7N2kzqPfjh5LzSWcY-0O2D_0oueL6IPEXHRtUnXDAXydlShmQrcTtPj-l-J3o5VtsnjY0zn2EOmjJEljG2GvlTgsJ0uVIg5uit2KZP1d_bS2YQS7TOkFiPIcEOoxn33oTl1KNassyrfH_i2k42zQyvECbJ5_N827j4-TFD8_zB0Bku02HB2RHe5gLM6Mzeo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+<div class="relative w-full px-gutter pb-xl text-white">
+<div class="max-w-container-max mx-auto space-y-md">
+<span class="inline-block px-3 py-1 bg-[#2F855A]/20 border border-[#2F855A]/30 backdrop-blur-md rounded-full text-label-sm font-label-sm text-white uppercase tracking-widest">Limited Edition</span>
+<h1 class="font-headline-xl text-headline-xl leading-none">The Onyx Horizon <br/>Series</h1>
+<p class="font-body-lg text-body-lg max-w-md opacity-90">Precision engineering meets minimalist aesthetics. Experience our most advanced footwear collection yet.</p>
+<div class="flex gap-sm">
+<button class="bg-[#2F855A] hover:opacity-90 text-white px-lg py-4 rounded-lg font-label-md transition-all duration-200 active:scale-95 shadow-lg shadow-[#2F855A]/20">
+                            Shop The Collection
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Categories -->
+<section class="py-xl bg-surface">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Curated Categories</h2>
+<p class="font-body-md text-on-surface-variant">Find exactly what you're looking for.</p>
+</div>
+<button class="text-primary font-label-md flex items-center gap-1 hover:underline">
+                        View All <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="flex gap-md overflow-x-auto hide-scrollbar pb-base -mx-gutter px-gutter">
+<div class="flex-none w-64 group cursor-pointer">
+<div class="relative h-80 w-full overflow-hidden rounded-xl mb-base">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A minimalist display of sleek black and white athletic wear arranged on a slate blue background. The lighting is overhead and even, creating a clean corporate studio look. The scene emphasizes high-performance materials and professional design with a cool-toned color palette of navy, white, and soft greys." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyNGv5pPw6NGoKUWxM9VcaKj0Ai2ltvel4T3oKL6lQ4Skt1yE3WovJVJwJ8UamePKblKwNqSd7_0-UgGsGAYnCDfKqqol-5o5DHcrK1YjZip-TGQ1-k8kIjEblHgVueys_rq3Uw_PaznLuWdzOSxH90ELrPsoOoExDL1hwAbmUFaWNTC_brbzfncwPcr0a13H1NfBnujvqkB51xDqGGBYkLWYDFoFBFwYy63lFrO_MX-BPwXMKB8oLSlGMyTmg3pq9Mw5gnEmdFpbc"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Activewear</h3>
+<p class="font-body-md text-on-surface-variant">124 Items</p>
+</div>
+<div class="flex-none w-64 group cursor-pointer">
+<div class="relative h-80 w-full overflow-hidden rounded-xl mb-base">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Premium footwear category visual featuring several minimalist sneakers in soft white and slate grey tones. The items are staged on geometric concrete blocks against a neutral background. The lighting is soft and airy, conveying a sense of high-end quality and modern professional aesthetics using the brand's navy and emerald green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7NvlZfn4ttzcZhhL2zWwVofFkTCNxE_8sCYjHNIScDjHGTOtOr10sRhAfwo3xwyMBdgktoC665Zipk7_1FbL4kHqoxrgEWyNmJDSH4iTAfr8r9PkxM21MQNd-iLUmc-gCQq3WvVuQJwenZWl9P5MxWHWph8xurN3mY2v52-L5hdblefk8ql5l-Y00_Q787kbsP5ERwJLlzqvhosxrpRDb1r66tUK5dlp5Wcf_3Oa1qnXlOlKLkaV9NMithJK0S_nDDoUIRS4ily-m"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Footwear</h3>
+<p class="font-body-md text-on-surface-variant">86 Items</p>
+</div>
+<div class="flex-none w-64 group cursor-pointer">
+<div class="relative h-80 w-full overflow-hidden rounded-xl mb-base">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A collection of luxury leather accessories including a minimalist navy blue backpack and a sleek cardholder. The items are perfectly aligned on a pristine white surface with sharp, controlled lighting that creates a high-contrast corporate modern look. The palette focuses on deep navy blues and metallic slate accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzOedB4J8vFHcE2gVj8yFb24yJNHbOF1_Lgr0EkabLUrqeWDEcp2tlr12PUGbOBUpL-XHTjIx3RNOGKn4ZNKLJhLwTCqAfel03yoNMTJjhUAhq0kvVWFxzSrxsANL0Ss3GwlIBprEau2wC5-rokYtYERmp7stQklWNGTwA0JbT7KHEsjrO17g-QaxvicC_JUMTlJRDKEeSC8Bu8YqP1V9F0bu4VBpuC9TpLYaAB0yWIW5AXzyZwmeDbIWpmMmtqXPevBQ4y2bCQ_pL"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Accessories</h3>
+<p class="font-body-md text-on-surface-variant">42 Items</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Selection Grid -->
+<section class="py-xl bg-surface-container-low">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-lg">
+<h2 class="font-headline-xl text-headline-xl text-primary">Featured Selection</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Our editors hand-pick the finest pieces for the season. Trust in quality that lasts.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-md">
+<!-- Product 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" data-alt="A luxury white smartwatch with a minimalist interface, resting on a clean slate blue background. The studio lighting is bright and modern, creating a professional light-mode look. The image emphasizes precision engineering and high-end design with subtle emerald green interface elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzaU7XSaOaDVZr1NOVdGuIES9aftpoP6OGmtAQ7O2yHL9nLWnkT42kcknYZnLeYC7HdpQHGAx7RHsbanS1bLb62nFeSwX83cAmcQlcqL_TuzPYu0vHaBt9ZUSQfDicI_S2m6GyWvgGMFEjIM8pEw0pFzeQrCl3MQd5eXSzBM0ZMESACYysjvPyHSH3ammbkV0_GCbuU0_Huu_WhtPmr8aRBtPnzWoZCV1bUoSIy_QQIeAKfNExqBgEZRbobCfWxrntNWGqqI13nkZp"/>
+<div class="absolute top-2 right-2 flex flex-col gap-xs">
+<span class="bg-[#2F855A] text-white text-[10px] px-2 py-1 rounded font-bold uppercase">New</span>
+</div>
+<button class="absolute bottom-2 right-2 bg-primary text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="p-md space-y-xs">
+<p class="text-on-surface-variant font-label-sm uppercase tracking-wider text-[10px]">Lifestyle</p>
+<h4 class="font-headline-md text-[18px] text-primary truncate">Chrono White S2</h4>
+<p class="font-bold text-primary">$349.00</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" data-alt="Professional studio shot of luxury black over-ear headphones on a minimalist wooden stand. The lighting is cinematic with soft highlights on the metallic surfaces. The aesthetic is clean, corporate, and minimalist, utilizing a dark navy and charcoal palette with soft white ambient light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ0F3sPlJiimp2DvKKaoK6qWzipcarV7sl27TKreUiIfZtQpC36heou9SCm1DqzS5yvzSr5W71Mo39cWNw_PY-x9S9vPcroOZC-dEJ7y2ycrRcGPXH4Na1myMHE1_XoO39IvXqn874rwXFSoNNtHyZEibQyaji1pBK-ZuCa5-gxiAprN0ueBrXqAM2nSgZ3ke83l7kx0h0NpBigiVyEvo96iyxIjZbyNW3nX55JJLSR3BzrGNhUZW4CKK8D8OYJi_pKgzAWbwOPLxG"/>
+<button class="absolute bottom-2 right-2 bg-primary text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="p-md space-y-xs">
+<p class="text-on-surface-variant font-label-sm uppercase tracking-wider text-[10px]">Audio</p>
+<h4 class="font-headline-md text-[18px] text-primary truncate">Hush Pro ANC</h4>
+<p class="font-bold text-primary">$299.00</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" data-alt="Classic high-top sneakers in a pristine white and cream colorway, shot in a minimalist urban studio setting. The lighting is natural and soft, coming from the side to highlight the textile grain. The vibe is sophisticated and modern, adhering to a light-mode corporate aesthetic with clean lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMcucXVqUCULoFIB9OgpuOkG6CpQm-NpUGl4KKKx5sGg_a7tcsOwKFYfgG-8VFyerpbxX619QkX_pVcB19NqnqgREg8dfsYW4qP4RTV-YpBE_hu2YMz5XwEodndG2NT0RD14SDUfIYI2soUsryeQSGmJsJhDymeG9B2l8Ske7ifQytRkr2Igu5KblyyA-szNoye7EvQEjxIVyu7IauUwtOrH-lHiLQ2kdIRhwVnvacuRBXAteKU5wy9TTmH6xkI8hQ4MCfmjGHeXxU"/>
+<button class="absolute bottom-2 right-2 bg-primary text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="p-md space-y-xs">
+<p class="text-on-surface-variant font-label-sm uppercase tracking-wider text-[10px]">Footwear</p>
+<h4 class="font-headline-md text-[18px] text-primary truncate">Vanguard High-Top</h4>
+<p class="font-bold text-primary">$185.00</p>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" data-alt="Vibrant crimson athletic shoes shown in a dynamic pose against a neutral grey studio background. The lighting is sharp and technical, emphasizing the high-performance grip and mesh texture. The scene maintains a premium minimalist quality with high contrast and precise focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA21_yZgHaTdJJPiIxjJKJhnwXYI2TPpBuP_Iu_ooXq1izu8CIPHz9gVjMqqZjCNC5-16wZqluZ3PTdu3pK8J_pzAFRLbFWsmIwXGLPTM-G1renFua3k4PtBt1ViQDaGh22sUvSKg-vp5Yd3woig00jp9SdDweIkzkH9ctsFQg4iS8aHlgEdKS-96rqfel3gy-24k_7_brJ74OMW05LCThdDBWfcrltqoNUGhvVpFUiftAk3Z93wFAV2Es3l4Wxsk1M3m7zdwRh_sM"/>
+<div class="absolute top-2 left-2">
+<span class="bg-[#ba1a1a] text-white text-[10px] px-2 py-1 rounded font-bold uppercase">-20%</span>
+</div>
+<button class="absolute bottom-2 right-2 bg-primary text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="p-md space-y-xs">
+<p class="text-on-surface-variant font-label-sm uppercase tracking-wider text-[10px]">Performance</p>
+<h4 class="font-headline-md text-[18px] text-primary truncate">Aero Glide Runner</h4>
+<div class="flex items-center gap-xs">
+<p class="font-bold text-primary">$128.00</p>
+<p class="text-on-surface-variant line-through text-[12px]">$160.00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-xl bg-primary text-on-primary">
+<div class="px-gutter max-w-container-max mx-auto text-center space-y-md">
+<h2 class="font-headline-lg text-headline-lg">Join the LUXE Circle</h2>
+<p class="font-body-md opacity-80 max-w-lg mx-auto">Get early access to collections, exclusive events, and the latest in minimalist design philosophy.</p>
+<form class="max-w-md mx-auto flex flex-col md:flex-row gap-sm">
+<input class="flex-grow bg-white text-primary border-none rounded-lg px-md py-4 focus:ring-2 focus:ring-[#2F855A] transition-all" placeholder="Your email address" type="email"/>
+<button class="bg-[#2F855A] hover:bg-[#276749] text-white px-lg py-4 rounded-lg font-label-md transition-all">
+                        Subscribe
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant dark:border-outline w-full py-xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md px-gutter max-w-container-max mx-auto">
+<div class="space-y-md">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary">LUXE</div>
+<p class="font-body-md text-on-surface-variant dark:text-surface-variant">Elevated essentials for the modern professional. Built on principles of transparency, sustainability, and uncompromising quality.</p>
+<div class="flex gap-sm">
+<a class="w-10 h-10 flex items-center justify-center rounded-full border border-outline hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full border border-outline hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">brand_awareness</span></a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full border border-outline hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<div class="space-y-sm">
+<h5 class="font-label-md text-primary dark:text-inverse-primary uppercase tracking-widest">Company</h5>
+<nav class="flex flex-col gap-xs">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary underline transition-all duration-200" href="#">About Us</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary underline transition-all duration-200" href="#">Sustainability</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary underline transition-all duration-200" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary underline transition-all duration-200" href="#">Contact</a>
+</nav>
+</div>
+<div class="space-y-sm">
+<h5 class="font-label-md text-primary dark:text-inverse-primary uppercase tracking-widest">Support</h5>
+<nav class="flex flex-col gap-xs">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary underline transition-all duration-200" href="#">Shipping &amp; Returns</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary underline transition-all duration-200" href="#">Order Tracking</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary underline transition-all duration-200" href="#">Size Guide</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary underline transition-all duration-200" href="#">FAQs</a>
+</nav>
+</div>
+<div class="space-y-sm">
+<h5 class="font-label-md text-primary dark:text-inverse-primary uppercase tracking-widest">Location</h5>
+<p class="text-on-surface-variant dark:text-surface-variant">Flagship Store:<br/>1240 Madison Avenue<br/>New York, NY 10028</p>
+<div class="h-32 rounded-lg overflow-hidden grayscale contrast-125">
+<img alt="Map location" class="w-full h-full object-cover" data-location="New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe82A7Xu3YJE1568JZwlksJMsqrTVKqOe4oPp54tritzxmtLyRE6AwbPP8YLOIrAFNswOF6r6UloRhHiHMW2_W1vC8kSDUueviH9yCeSpqIu7WvUe-eibZkvPNDcb1gNSetPEjL-AEOF3sDrb7MhUWZSFqaOcDbFa34VxAV5hzh9JLrGghSwEZOqUtfRqjRpVX5XcgSGuIU0RXAuaacBueoZ-8uyqVpft7pTBZVl3FTHtpX_-S8KLg2--Bxb_M-KweWdYYFsPs7D_p"/>
+</div>
+</div>
+</div>
+<div class="mt-xl pt-lg border-t border-outline-variant max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="text-on-surface-variant dark:text-surface-variant font-label-sm">© 2024 LUXE Ecommerce. All rights reserved.</p>
+<div class="flex items-center gap-md">
+<a href="cart.html"><span class="material-symbols-outlined text-on-surface-variant opacity-40">shopping_cart</span>
+<span class="material-symbols-outlined text-on-surface-variant opacity-40">credit_card</span>
+<span class="material-symbols-outlined text-on-surface-variant opacity-40">contactless</span>
+</div>
+</div>
+</footer>
+
+    <script>
+    // 1. पासवर्ड सुरक्षा
+var user = prompt("ID डालें:");
+var pass = prompt("Password डालें:");
+
+if (user !== "raza" || pass !== "7297") {
+  alert("Access Denied!");
+  document.body.innerHTML = "<h1 style='text-align:center;margin-top:50px;'>Unauthorized Access</h1>";
+} else {
+  // 2. टच और कार्ट सिस्टम
+  let cartCount = 0;
+  // कार्ट का नंबर दिखाने वाला डिब्बा ढूंढना
+  const cartBadge = document.querySelector('span.bg-\\[\\#2F855A\\]') || document.querySelector('.relative span');
+
+  document.querySelectorAll('button').forEach(btn => {
+    btn.onclick = function() {
+      // अगर बटन में शॉपिंग कार्ट का नाम या आइकन है
+      if (btn.innerHTML.includes('add_shopping_cart') || btn.innerText.toLowerCase().includes('add')) {
+        cartCount++;
+        if (cartBadge) {
+  cartBadge.innerText = cartCount;
+          cartBadge.style.display = "block";
+        }
+        alert("सामान कार्ट में डाल दिया गया है!");
+      }
+    };
+  });
+}
+</script>
+</body>
+</html>
