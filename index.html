@@ -328,18 +328,41 @@
 </div>
 <div class="mt-xl pt-lg border-t border-outline-variant max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-md">
 <p class="text-on-surface-variant dark:text-surface-variant font-label-sm">© 2024 LUXE Ecommerce. All rights reserved.</p>
-<div class="flex items-center gap-md">
-<span class="material-symbols-outlined text-on-surface-variant opacity-40">payments</span>
-<span class="material-symbols-outlined text-on-surface-variant opacity-40">credit_card</span>
+<div class="flex items-center gap-md"><span class="material-symbols-outlined text-on-surface-variant opacity-40">shopping_cart</span>
+<a href="stitch_modern_e_commerce_platform/shopping_cart/code.html"><span class="material-symbols-outlined text-on-surface-variant opacity-40">credit_card</span>
 <span class="material-symbols-outlined text-on-surface-variant opacity-40">contactless</span>
 </div>
 </div>
 </footer>
-</body></html><script>
-  var user = prompt("ID डालें:");
-  var pass = prompt("Password डालें:");
-  if (user !== "raza" || pass !== "7297") {
-    alert("Access Denied!");
-    document.body.innerHTML = "<h1>Unauthorized Access</h1>";
-  }
+
+    <script>
+    // 1. पासवर्ड सुरक्षा
+var user = prompt("ID डालें:");
+var pass = prompt("Password डालें:");
+
+if (user !== "raza" || pass !== "7297") {
+  alert("Access Denied!");
+  document.body.innerHTML = "<h1 style='text-align:center;margin-top:50px;'>Unauthorized Access</h1>";
+} else {
+  // 2. टच और कार्ट सिस्टम
+  let cartCount = 0;
+  // कार्ट का नंबर दिखाने वाला डिब्बा ढूंढना
+  const cartBadge = document.querySelector('span.bg-\\[\\#2F855A\\]') || document.querySelector('.relative span');
+
+  document.querySelectorAll('button').forEach(btn => {
+    btn.onclick = function() {
+      // अगर बटन में शॉपिंग कार्ट का नाम या आइकन है
+      if (btn.innerHTML.includes('add_shopping_cart') || btn.innerText.toLowerCase().includes('add')) {
+        cartCount++;
+        if (cartBadge) {
+  cartBadge.innerText = cartCount;
+          cartBadge.style.display = "block";
+        }
+        alert("सामान कार्ट में डाल दिया गया है!");
+      }
+    };
+  });
+}
 </script>
+</body>
+</html>
